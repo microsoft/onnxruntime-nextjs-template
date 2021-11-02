@@ -1,0 +1,3 @@
+{
+    "azureML.defaultWorkspaceId": "/subscriptions/ea482afa-3a32-437c-aa10-7de928a9e793/resourceGroups/onnx_training/providers/Microsoft.MachineLearningServices/workspaces/ort_training_dev"
+}
