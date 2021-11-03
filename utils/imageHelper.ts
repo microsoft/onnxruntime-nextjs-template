@@ -38,7 +38,7 @@ function imageDataToTensor(image: Jimp, dims: number[]): Tensor {
 
     // 4. convert to float32
     let i, l = transposedData.length; // length, we need this for the loop
-    // create the Float32Array size 3 * 224 * 224 for these deimensions output
+    // create the Float32Array size 3 * 224 * 224 for these dimensions output
     const float32Data = new Float32Array(dims[1] * dims[2] * dims[3]);
     for (i = 0; i < l; i++) {
       float32Data[i] = transposedData[i] / 255.0; // convert to float
