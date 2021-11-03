@@ -29,7 +29,7 @@ import { InferenceSession } from 'onnxruntime-web';
     const feeds: Record<string, ort.Tensor> = {};
     feeds[session.inputNames[0]] = preprocessedData;
     
-    // run the session inferene.
+    // Run the session inference.
     const outputData = await session.run(feeds);
 
     // Get the end time to calculate inference time.
