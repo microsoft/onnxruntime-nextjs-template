@@ -49,10 +49,10 @@ const ImageCanvas = (props: Props) => {
   const submitInference = async () => {
 
     // Get the image data from the canvas and submit inference.
-    var [infernceResult,inferenceTime] = await inferenceSqueezenet(image.src);
+    var [inferenceResult,inferenceTime] = await inferenceSqueezenet(image.src);
 
     // Get the highest confidence.
-    var topResult = infernceResult[0];
+    var topResult = inferenceResult[0];
 
     // Update the label and confidence
     setLabel(topResult.name.toUpperCase());
