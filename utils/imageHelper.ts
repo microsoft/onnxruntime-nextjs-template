@@ -11,12 +11,12 @@ export async function getImageTensorFromPath(path: string, dims: number[] =  [1,
 }
 
 async function loadImageFromPath(path: string, width: number = 224, height: number= 224): Promise<Jimp> {
- // Use Jimp to load the image and resize it.
-    var imageData = await Jimp.default.read(path).then((imageBuffer: Jimp) => {
-        return imageBuffer.resize(width, height);
-      });
+  // Use Jimp to load the image and resize it.
+  var imageData = await Jimp.default.read(path).then((imageBuffer: Jimp) => {
+    return imageBuffer.resize(width, height);
+  });
 
-    return imageData;
+  return imageData;
 }
 
 function imageDataToTensor(image: Jimp, dims: number[]): Tensor {
