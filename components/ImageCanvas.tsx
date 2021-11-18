@@ -61,8 +61,8 @@ const ImageCanvas = (props: Props) => {
 
   };
 
-    return (
-      <>
+  return (
+    <>
       <button
         className={styles.grid}
         onClick={displayImageAndRunInference} >
@@ -73,7 +73,7 @@ const ImageCanvas = (props: Props) => {
       <span>{topResultLabel} {topResultConfidence}</span>
       <span>{inferenceTime}</span>
     </>
-    )
+  )
 
 };
 
