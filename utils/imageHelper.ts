@@ -43,8 +43,8 @@ function imageDataToTensor(image: Jimp, dims: number[]): Tensor {
       float32Data[i] = transposedData[i] / 255.0; // convert to float
     }
     // 5. create the tensor object from onnxruntime-web.
-      const inputTensor = new Tensor("float32", float32Data, dims);
-      return inputTensor;
+    const inputTensor = new Tensor("float32", float32Data, dims);
+    return inputTensor;
   }
 
 

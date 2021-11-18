@@ -15,7 +15,6 @@ import { imagenetClasses } from '../data/imagenet';
     // Run inference and get results.
     var [results, inferenceTime] =  await runInference(session, preprocessedData);
     return [results, inferenceTime];
- 
   }
 
 

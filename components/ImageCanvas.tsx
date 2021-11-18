@@ -45,7 +45,7 @@ const ImageCanvas = (props: Props) => {
     // Run the inference
     submitInference();
   };
-//
+
   const submitInference = async () => {
 
     // Get the image data from the canvas and submit inference.
