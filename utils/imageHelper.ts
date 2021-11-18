@@ -1,8 +1,7 @@
-import Jimp  from 'jimp/*';
+import * as Jimp from 'jimp';
 import { Tensor } from 'onnxruntime-web';
-const jimp = require('jimp');
 
-export default async function getImageTensorFromPath(path: string, dims: number[] =  [1, 3, 224, 224]): Promise<Tensor> {
+export async function getImageTensorFromPath(path: string, dims: number[] =  [1, 3, 224, 224]): Promise<Tensor> {
   // 1. load the image  
   var image = await loadImagefromPath(path, dims[2], dims[3]);
   // 2. convert to tensor
@@ -13,7 +12,7 @@ export default async function getImageTensorFromPath(path: string, dims: number[
 
 async function loadImagefromPath(path: string, width: number = 224, height: number= 224): Promise<Jimp> {
  // Use Jimp to load the image and resize it.
-    var imageData = await jimp.default.read(path).then((imageBuffer: Jimp) => {
+    var imageData = await Jimp.default.read(path).then((imageBuffer: Jimp) => {
         return imageBuffer.resize(width, height)
       });
 

@@ -1,7 +1,6 @@
 import * as ort from 'onnxruntime-web';
 import _ from 'lodash';
-import {imagenetClasses} from '../data/imagenet';
-import { InferenceSession } from 'onnxruntime-web';
+import { imagenetClasses } from '../data/imagenet';
 
   export async function runSqueezenetModel(preprocessedData: any): Promise<[any, number]> {
     
@@ -20,7 +19,7 @@ import { InferenceSession } from 'onnxruntime-web';
   }
 
 
-  async function runInference(session: InferenceSession, preprocessedData: any): Promise<[any, number]> {
+  async function runInference(session: ort.InferenceSession, preprocessedData: any): Promise<[any, number]> {
 
     // Get start time to calculate inference time.
     const start = new Date();

@@ -1,7 +1,7 @@
-import {useRef, useState} from 'react';
-import {IMAGE_URLS} from '../data/sample-image-urls';
-import { inferenceSqueezenet } from '../utils/predict'
-import styles from '../styles/Home.module.css'
+import { useRef, useState } from 'react';
+import { IMAGE_URLS } from '../data/sample-image-urls';
+import { inferenceSqueezenet } from '../utils/predict';
+import styles from '../styles/Home.module.css';
 
 interface Props {
   height: number;
