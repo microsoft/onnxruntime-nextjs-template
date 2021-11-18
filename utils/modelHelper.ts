@@ -39,7 +39,7 @@ import { imagenetClasses } from '../data/imagenet';
     // Get output results with the output name from the model export.
     const output = outputData[session.outputNames[0]];
     //Get the softmax of the output data. The softmax transforms values to be between 0 and 1
-    var outputSoftmax = softmax(Array.prototype.slice.call(output.data))
+    var outputSoftmax = softmax(Array.prototype.slice.call(output.data));
     
     //Get the top 5 results.
     var results = imagenetClassesTopK(outputSoftmax, 5);
